@@ -1,0 +1,21 @@
+{
+  "name": "@klogs/payment-gateway-client",
+  "version": "1.0.0",
+  "description": "Klogs Payment Gateway Node.js Client",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "example": "node examples/example_payment.js"
+  },
+  "keywords": [
+    "klogs",
+    "payment",
+    "gateway",
+    "pgw"
+  ],
+  "author": "Klogs",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
