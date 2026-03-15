@@ -99,6 +99,10 @@
  * @property {string} [referenceCode]
  * @property {boolean} [useStoredCard]
  * @property {CreditCard} [card]
+ * @property {string} [ownerKey]
+ * @property {string} [cardId]
+ * @property {boolean} [saveCard]
+ * @property {string} [customerIp]
  * @property {Reward} [reward]
  * @property {Address} [invoice]
  * @property {Address} [shipping]
@@ -110,7 +114,7 @@
  * @property {string} [phone]
  * @property {string} [returnURL]
  * @property {'directSale'|'provision'} [chargeType]
- * @property {string} [paymentSystemId]
+ * @property {string} [paymentSystemCode]
  * @property {string} [nationalNumber]
  * @property {Product[]} [products]
  */
@@ -119,7 +123,7 @@
  * @typedef {Object} HostedPaymentRequest
  * @property {number} amount
  * @property {string} [currency]
- * @property {string} [reference]
+ * @property {string} [referenceCode]
  * @property {Address} [invoice]
  * @property {Address} [shipping]
  * @property {string} [explanation]
@@ -131,8 +135,7 @@
  * @property {string} [fullName]
  * @property {string} [nationalNumber]
  * @property {Product[]} [products]
- * @property {string} [paymentSystemId]
- * @property {string} [paymentSystemGroupId]
+ * @property {string} [paymentMethod]
  */
 
 /**

@@ -3,11 +3,7 @@
 const KlogsHttpClient = require('./KlogsHttpClient');
 const CardPaymentService = require('./services/CardPaymentService');
 const HostedPaymentService = require('./services/HostedPaymentService');
-const PaymentChannelService = require('./services/PaymentChannelService');
-const PaymentSystemGroupService = require('./services/PaymentSystemGroupService');
-const PaymentSystemService = require('./services/PaymentSystemService');
 const PaymentTransactionService = require('./services/PaymentTransactionService');
-const PaymentLinkService = require('./services/PaymentLinkService');
 
 /**
  * Main entry point for the Klogs Payment Gateway client.
@@ -33,20 +29,8 @@ class KlogsClient {
     /** @type {HostedPaymentService} */
     this.hostedPayment = new HostedPaymentService(http);
 
-    /** @type {PaymentChannelService} */
-    this.paymentChannel = new PaymentChannelService(http);
-
-    /** @type {PaymentSystemGroupService} */
-    this.paymentSystemGroup = new PaymentSystemGroupService(http);
-
-    /** @type {PaymentSystemService} */
-    this.paymentSystem = new PaymentSystemService(http);
-
     /** @type {PaymentTransactionService} */
     this.transaction = new PaymentTransactionService(http);
-
-    /** @type {PaymentLinkService} */
-    this.paymentLink = new PaymentLinkService(http);
   }
 }
 

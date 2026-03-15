@@ -40,28 +40,11 @@ class CardPaymentService {
    * @param {string} binNumber
    * @param {number} amount
    * @param {string} currency  - ISO 4217 code, e.g. "TRY"
+   * @param {string} [cardId]  - Optional card ID for stored cards
    * @returns {Promise<import('../models').CommissionResponse>}
    */
-  commissionsByBin(binNumber, amount, currency) {
-    return this._http.get('api/cardPayment/installments', { binNumber, amount, currency });
-  }
-
-  /**
-   * Refunds a completed payment.
-   * @param {import('../models').RefundRequest} model
-   * @returns {Promise<import('../models').Response>}
-   */
-  refund(model) {
-    return this._http.post('api/cardPayment/refund', model);
-  }
-
-  /**
-   * Voids (cancels) a payment.
-   * @param {import('../models').VoidRequest} model
-   * @returns {Promise<import('../models').Response>}
-   */
-  void(model) {
-    return this._http.post('api/cardPayment/void', model);
+  commissionsByBin(binNumber, amount, currency, cardId) {
+    return this._http.get('api/cardPayment/installments', { binNumber, amount, currency, cardId });
   }
 }
 
